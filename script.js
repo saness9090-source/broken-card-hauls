@@ -82,14 +82,14 @@ async function refreshAuthUI(user) {
     setAccountStatus("Signed in: " + (currentUser.email || "collector"), true);
     signOutBtn.classList.remove("hidden");
     signInBtn.classList.add("hidden"); signUpBtn.classList.add("hidden");
-    form.querySelectorAll("label").forEach(label => label.classList.add("hidden"));
+    form.querySelectorAll("label, input").forEach(label => label.classList.add("hidden"));
     try { await loadCloudData(currentUser); setAuthMessage("Signed in. Your spellbook is ready.", "ok"); }
     catch (error) { setAuthMessage("Signed in, but couldn't load cloud data: " + (error.message || "Check table setup."), "error"); }
   } else {
     setAccountStatus(supabaseClient ? "Not signed in" : "Needs setup");
     signOutBtn.classList.add("hidden");
     signInBtn.classList.remove("hidden"); signUpBtn.classList.remove("hidden");
-    form.querySelectorAll("label").forEach(label => label.classList.remove("hidden"));
+    form.querySelectorAll("label, input").forEach(label => label.classList.remove("hidden"));
   }
 }
 async function initAuth() {
