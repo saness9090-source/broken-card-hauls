@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Broken Card Hauls — Collector's Spellbook</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div class="account-buttons">
+      <a href="signup.html" class="account-button">Sign up</a>
+      <a href="login.html" class="account-button">Log in</a>
+    </div>
+    <header>
+      <div class="top">
+        <div class="brand">
+          <div class="sigil">✦</div>
+
+          <div>
+            <h1>Broken Card Hauls</h1>
+            <p>Your mystical MTG collector's spellbook</p>
+          </div>
+        </div>
+
+        <div class="tag">✧ COLLECT · VALUE · TRADE ✧</div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <div class="eyebrow">✦ The collector's archive</div>
+
+          <h2>Every pull has a <span>story.</span></h2>
+          <p>
+            Search printings, track your collection, save your next chase card,
+            and organize what you're willing to trade — all in one arcane little
+            vault.
+          </p>
+
+          <div class="searchbar" style="margin-bottom: 0">
+            <input
+              type="search"
+              id="searchInput"
+              class="input"
+              placeholder="Search a card name… e.g. Sol Ring"
+              aria-label="Search Magic cards"
+            /><button id="searchBtn">Search cards ✧</button>
+          </div>
+          <div id="searchStatus" class="status" aria-live="polite"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <small>Cards in your vault</small><strong id="ownedCount">0</strong>
+          </div>
+          <div class="stat">
+            <small>Estimated collection value</small
+            ><strong class="accent" id="ownedValue">$0.00</strong>
+          </div>
+          <div class="stat">
+            <small>Wishlist spells</small><strong id="wishCount">0</strong>
+          </div>
+          <div class="stat">
+            <small>Marked for trade</small><strong id="tradeCount">0</strong>
+          </div>
+        </div>
+      </section>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="discover">Discover</button
+        ><button class="tab" data-tab="collection">My Collection</button
+        ><button class="tab" data-tab="wishlist">Wishlist</button
+        ><button class="tab" data-tab="trades">Trade Binder</button>
+      </div>
+      <div class="layout">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3 id="viewTitle">Discover cards</h3>
+              <div class="sub" id="viewSub">
+                Find a card or browse featured favorites.
+              </div>
+            </div>
+            <button class="ghost" id="exportBtn">Export data ↗</button>
+          </div>
+          <div id="content"></div>
+        </section>
+        <aside class="side">
+          <div class="panel sidebox">
+            <h3>✧ Quick add</h3>
+            <p>
+              Search any card by name above. Add a printing to your collection,
+              wishlist, or trade binder from its card tile.
+            </p>
+            <div class="note">
+              Prices are indicative Scryfall estimates, not offers or guaranteed
+              sale prices. Actual value depends on printing, condition,
+              language, and finish.
+            </div>
+          </div>
+          <div class="panel sidebox">
+            <h3>📜 Your spellbook</h3>
+            <p>
+              Your list is saved in this browser on this device. Export
+              regularly to back it up. This starter site does not create
+              accounts or sync across devices.
+            </p>
+            <button
+              class="secondary"
+              id="importBtn"
+              style="width: 100%; margin-top: 12px"
+            >
+              Import backup JSON</button
+            ><input
+              id="importFile"
+              type="file"
+              accept=".json,application/json"
+              class="hidden"
+            />
+          </div>
+          <div class="panel sidebox">
+            <h3>🔮 How trading works</h3>
+            <p>
+              Mark cards for trade to build a local trade binder. This does not
+              publish listings or contact other collectors — it just helps you
+              organize what you may offer.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <div class="footer">
+        Broken Card Hauls is unofficial Fan Content permitted under the Fan
+        Content Policy. Not approved/endorsed by Wizards. Portions of the
+        materials used are property of Wizards of the Coast. ©Wizards of the
+        Coast LLC. Magic: The Gathering names, card data, and related
+        intellectual property belong to their respective owners. Card data and
+        pricing supplied by
+        <a
+          class="link"
+          href="https://scryfall.com"
+          target="_blank"
+          rel="noreferrer"
+          >Scryfall</a
+        >.
+        <a
+          class="link"
+          href="https://company.wizards.com/en/legal/fancontentpolicy"
+          target="_blank"
+          rel="noreferrer"
+          >Fan Content Policy</a
+        >.
+      </div>
+    </main>
+  </body>
+</html>
