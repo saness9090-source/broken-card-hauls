@@ -315,3 +315,12 @@ button.ghost {
   transform: translateY(-2px);
   box-shadow: 0 0 15px 8px #8b5cf6;
 }
+.searchbar button {
+  transform: none !important;
+  margin-top: 0;
+  align-self: stretch;
+}
+
+.searchbar {
+  align-items: stretch;
+}
