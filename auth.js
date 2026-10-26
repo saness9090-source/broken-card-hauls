@@ -1,12 +1,12 @@
 // Shared authentication for Broken Card Hauls.
 // Use your Supabase Project URL and Publishable key (never a secret key).
-const SUPABASE_URL = "PASTE_YOUR_PROJECT_URL_HERE";
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+const SUPABASE_URL = "https://wnbgyjiftqhehhmfqmit.supabase.co/rest/v1/";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ";
 
 const authClientReady = window.supabase &&
-  SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("PASTE_") &&
+  SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("https://wnbgyjiftqhehhmfqmit.supabase.co/rest/v1/") &&
   SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_") &&
-  !SUPABASE_PUBLISHABLE_KEY.includes("PASTE_");
+  !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ");
 
 const authClient = authClientReady
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
