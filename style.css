@@ -156,8 +156,18 @@ main {
 }
 .searchbar {
   display: flex;
+  align-items: stretch;
   gap: 10px;
   margin: 20px 0 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.searchbar button {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+  flex-shrink: 0;
 }
 .searchbar input {
   flex: 1;
