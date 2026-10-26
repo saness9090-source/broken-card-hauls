@@ -5,14 +5,12 @@ const storeKey = "brokenCardHauls_v1";
 // Never put a sb_secret_ key or your database password in browser code.
 const SUPABASE_URL = "https://wnbgyjiftqhehhmfqmit.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ";
-const supabaseReady = window.supabase &&
-  SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("https://wnbgyjiftqhehhmfqmit.supabase.co") &&
-  SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_") && !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ");
 
 const supabaseReady = !!window.supabase &&
   SUPABASE_URL.startsWith("https://") &&
   SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_");
 
+const supabaseClient = supabaseReady
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
   : null;
 let currentUser = null;
