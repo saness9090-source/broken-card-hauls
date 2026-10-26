@@ -394,4 +394,9 @@ button.ghost {
     box-sizing: border-box;
   }
 }
-
+#authForm.signed-in label,
+#authForm.signed-in input,
+#authForm.signed-in #signInBtn,
+#authForm.signed-in #signUpBtn {
+  display: none !important;
+}
