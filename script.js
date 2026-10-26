@@ -4,7 +4,7 @@ const storeKey = "brokenCardHauls_v1";
 // Paste your Supabase Project URL and Publishable key here.
 // Never put a sb_secret_ key or your database password in browser code.
 const SUPABASE_URL = "https://wnbgyjiftqhehhmfqmit.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ";
 const supabaseReady = window.supabase &&
   SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("PASTE_") &&
   SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_") && !SUPABASE_PUBLISHABLE_KEY.includes("PASTE_");
