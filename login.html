@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign In — Broken Card Hauls</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div class="brand">
+        <div class="sigil">✦</div>
+        <div>
+          <h1>Broken Card Hauls</h1>
+          <p>Your mystical MTG collector's spellbook</p>
+        </div>
+      </div>
+      <div class="tag">✧ COLLECT · VALUE · TRADE ✧</div>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-card panel">
+      <div class="eyebrow">✦ Welcome back, collector</div>
+      <h2>Return to your <span class="auth-gradient">spellbook</span></h2>
+      <p class="auth-intro">Sign in to continue managing your cards and trades.</p>
+
+      <form id="loginForm" class="signup-form">
+        <label for="loginEmail">Email address</label>
+        <input class="input" id="loginEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+
+        <label for="loginPassword">Password</label>
+        <input class="input" id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+
+        <button type="submit">Sign in ✧</button>
+        <p id="loginMessage" class="status" aria-live="polite"></p>
+      </form>
+      <p class="auth-switch">New here? <a class="link" href="signup.html">Create an account</a></p>
+      <p class="auth-switch"><a class="link" href="index.html">← Back to the spellbook</a></p>
+    </section>
+  </main>
+</body>
+</html>
