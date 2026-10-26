@@ -8,7 +8,11 @@ const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ
 const supabaseReady = window.supabase &&
   SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("https://wnbgyjiftqhehhmfqmit.supabase.co") &&
   SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_") && !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_RFIUTjjbp4Y3pLoMb_CzlA_Ps3uNpPJ");
-const supabaseClient = supabaseReady
+
+const supabaseReady = !!window.supabase &&
+  SUPABASE_URL.startsWith("https://") &&
+  SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_");
+
   ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY)
   : null;
 let currentUser = null;
