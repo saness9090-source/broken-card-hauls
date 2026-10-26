@@ -79,6 +79,7 @@ async function refreshAuthUI(user) {
   const signInBtn = document.getElementById("signInBtn");
   const signUpBtn = document.getElementById("signUpBtn");
   if (currentUser) {
+    form.classList.remove("signed-in");
     setAccountStatus("Signed in: " + (currentUser.email || "collector"), true);
     signOutBtn.classList.remove("hidden");
     signInBtn.classList.add("hidden"); signUpBtn.classList.add("hidden");
@@ -86,6 +87,7 @@ async function refreshAuthUI(user) {
     try { await loadCloudData(currentUser); setAuthMessage("Signed in. Your spellbook is ready.", "ok"); }
     catch (error) { setAuthMessage("Signed in, but couldn't load cloud data: " + (error.message || "Check table setup."), "error"); }
   } else {
+    form.classList.remove("signed-in");
     setAccountStatus(supabaseClient ? "Not signed in" : "Needs setup");
     signOutBtn.classList.add("hidden");
     signInBtn.classList.remove("hidden"); signUpBtn.classList.remove("hidden");
