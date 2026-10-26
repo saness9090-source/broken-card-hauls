@@ -110,6 +110,7 @@ main {
   top: -35px;
   font-size: 170px;
   color: #a78bfa12;
+  pointer-events: none;
 }
 .eyebrow {
   color: var(--blue);
