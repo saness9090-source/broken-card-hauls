@@ -73,6 +73,51 @@
         ><button class="tab" data-tab="wishlist">Wishlist</button
         ><button class="tab" data-tab="trades">Trade Binder</button>
       </div>
+      
+<section class="panel sidebox" id="accountPanel">
+  <h3>🔐 Your Account</h3>
+
+  <div id="accountStatus" class="status">
+    Checking account…
+  </div>
+
+  <form id="authForm">
+    <label for="authEmail">Email</label>
+    <input
+      id="authEmail"
+      type="email"
+      placeholder="Your email"
+      required
+    >
+
+    <label for="authPassword">Password</label>
+    <input
+      id="authPassword"
+      type="password"
+      placeholder="Your password"
+      required
+    >
+
+    <button id="signInBtn" type="submit">
+      Sign In
+    </button>
+
+    <button id="signUpBtn" type="button">
+      Create Account
+    </button>
+
+    <button
+      id="signOutBtn"
+      type="button"
+      class="secondary hidden"
+    >
+      Sign Out
+    </button>
+  </form>
+
+  <div id="authMessage" class="status" aria-live="polite"></div>
+</section>
+
       <div class="layout">
         <section class="panel">
           <div class="panel-head">
