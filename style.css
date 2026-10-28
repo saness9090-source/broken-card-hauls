@@ -402,25 +402,141 @@ button.ghost {
 }
 
 
-/* Broken Card Hauls - Mobile Fix */
-@media (max-width: 600px) {
-  * {
-    box-sizing: border-box;
-  }
+/* MOBILE LAYOUT REPAIR */
+@media screen and (max-width: 600px) {
 
-  html,
-  body {
+  /* Stop panels from squeezing into narrow columns */
+  main,
+  .hero,
+  .layout,
+  .panel,
+  .side,
+  .hero-card {
+    min-width: 0;
     width: 100%;
     max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
   }
 
-  body {
-    font-size: 16px;
+  main {
+    padding: 12px;
   }
 
-  img {
+  /* Stack the welcome panel and statistics */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero-card {
+    padding: 20px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .stat {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  /* Put the main content above the sidebar */
+  .layout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .layout > *,
+  .side > * {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  /* Make the header fit the phone */
+  header {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .brand h1 {
+    font-size: 26px;
+    overflow-wrap: anywhere;
+  }
+
+  .brand p {
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .tag {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Search fields and buttons */
+  .searchbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .searchbar input,
+  .searchbar button,
+  .searchbar .input {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 46px;
+  }
+
+  /* Keep navigation on one scrollable row */
+  .tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabs .tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* Prevent long text and card grids overflowing */
+  #content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #content img {
     max-width: 100%;
     height: auto;
   }
@@ -430,26 +546,8 @@ button.ghost {
   select,
   textarea {
     max-width: 100%;
-    font-size: 16px;
-  }
-
-  main,
-  header,
-  section,
-  .container,
-  .card-grid {
-    max-width: 100%;
-  }
-
-  #accountPanel1 {
-    width: 100%;
-    max-width: 100%;
-    padding: 16px;
-  }
-
-  #accountPanel1 input,
-  #accountPanel1 button {
-    width: 100%;
-    min-height: 44px;
+    min-width: 0;
   }
 }
+
+
